@@ -5,8 +5,8 @@
 
 @font-face {
   font-family: "Flaticon";
-  src: url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.eot");
-  src: url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.eot?#iefix") format("embedded-opentype"),
+  src: url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.eot?raw=true");
+  src: url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.eot?raw=true?#iefix") format("embedded-opentype"),
        url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.woff") format("woff"),
        url("https://github.com/alexhuginn/weather-app/blob/master/css/Flaticon.ttf") format("truetype"),
        url("https://github.com/alexhuginn/weather-app/raw/master/css/Flaticon.svg#Flaticon") format("svg");
