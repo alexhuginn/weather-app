@@ -1,0 +1,143 @@
+body {
+	background: url("../images/background.jpg") #D3F0EE;
+	background-position: center bottom;
+	background-size: cover;
+	color: #2B8588;
+	overflow: hidden;
+}
+
+* {box-sizing: border-box;}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+p {
+	font: 2em 'Muli', sans-serif;
+	text-align: center;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #A8E0E0;
+}
+
+
+main {
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	margin-left: -250px;
+	visibility: hidden;
+	width: 500px;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 5px;
+}
+
+section:first-child {border-right: 5px solid #2B8588;}
+
+section div {width: 100%;}
+
+.time {font-size: 2.2em;}
+
+.place {font-size: 0.75em;}
+
+.icon i:before {font-size: 3em;}
+
+.degree {
+	font-size: 1.9em;
+}
+
+.temp {
+	display: flex;
+	justify-content: center;
+}
+
+.degree p {margin-bottom: 0;}
+
+.symbol {
+	display: flex;
+	align-content: space-around;
+	flex-wrap: wrap;
+	width: 40%;
+}
+
+.symbol p {
+	cursor: pointer;
+	font-size: 0.85em;
+	font-weight: 800;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.inactive {color: #B2B2B2;}
+
+.description {font-size: 0.75em;}
+
+footer {
+	background: #2B8588;
+	color: #D4F1EF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.5em;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+
+footer p {
+	padding: 5px;
+}
+
+.loader {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.loader i {
+	margin: auto;
+	animation: loading 3s ease-in-out infinite;
+}
+
+.loader i:before {
+	font-size: 4em;
+	margin: 0;
+}
+
+@keyframes loading {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@media only screen and (max-width: 520px) {
+	main {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-top: 10px;
+		margin-left: 0;
+		width: 100%;
+	}
+	p {font-size: 1.5em;}
+	
+	.symbol p {font-size: 0.75em;}
+}
+
+@media only screen and (max-width: 450px) {
+	p {font-size: 1em;}
+	.symbol p {font-size: 0.5em;}
+}
