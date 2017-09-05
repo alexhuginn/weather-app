@@ -1,5 +1,5 @@
 body {
-	background: url("../images/background.jpg") #D3F0EE;
+	background: url("https://raw.githubusercontent.com/alexhuginn/weather-app/master/images/background.jpg") #D3F0EE;
 	background-position: center bottom;
 	background-size: cover;
 	color: #2B8588;
@@ -55,29 +55,24 @@ section div {width: 100%;}
 
 .icon i:before {font-size: 3em;}
 
-.degree {
-	font-size: 1.9em;
-}
-
 .temp {
 	display: flex;
 	justify-content: center;
 }
 
-.degree p {margin-bottom: 0;}
+.temp div {margin: auto;}
 
-.symbol {
-	display: flex;
-	align-content: space-around;
-	flex-wrap: wrap;
-	width: 40%;
-}
+.degree {font-size: 1.9em;}
+
+.temp p {margin: 0 auto;}
+
+.symbol {flex-wrap: wrap;}
 
 .symbol p {
 	cursor: pointer;
 	font-size: 0.85em;
 	font-weight: 800;
-	margin-bottom: 0;
+  	flex: 1;
 	text-align: left;
 }
 
@@ -98,9 +93,7 @@ footer {
 	width: 100%;
 }
 
-footer p {
-	padding: 5px;
-}
+footer p {padding: 5px;}
 
 .loader {
 	display: flex;
@@ -119,8 +112,8 @@ footer p {
 }
 
 @keyframes loading {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    	from {transform: rotate(0deg);}
+    	to {transform: rotate(360deg);}
 }
 
 @media only screen and (max-width: 520px) {
