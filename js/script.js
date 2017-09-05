@@ -22,7 +22,6 @@ $(function(){
 		longitude = position.coords.longitude;
 		
 		showDate();
-		getCity();
 		getWeather();
 	}
 
@@ -61,17 +60,12 @@ $(function(){
 		$(".date p").html(month + " " + day);
 	};
   
-	function getCity() {
-		$.getJSON(
-			"https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude,
-			function(info) {
-				if(info.status === "OK") {
-					$(".place p").html(info.results[info.results.length - 3].formatted_address);
-				} else {
-					$(".place p").html("Latitude: " + latitude + "<br/>Longitude: " + longitude);
-				}
- 			}
-		);
+	function getCity(city, country) {
+    		if(city) {
+      			$(".place p").html(city + ", " + country);
+    		} else {
+      			$(".place p").html("Latitude: " + latitude + "<br/>Longitude: " + longitude);
+    		}
 	};
 
 	function getWeather() {
@@ -79,13 +73,16 @@ $(function(){
 			"https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "&lon=" + longitude,
 			function(info) {
 				showIcon(info.sys.sunrise, info.sys.sunset, info.weather[0].main);
+        
+        			getCity(info.name, info.sys.country);   
+        
 				$(".description p").html(info.weather[0].description);
         
 				degreeCelsius = Math.round(info.main.temp);
 				degreeFahrenheit = Math.round(degreeCelsius * 1.8 + 32);
 				
 				$(".degree p").html(degreeCelsius + "&deg;");
-				
+        
 				showPage();
 			}
 		);
@@ -143,5 +140,4 @@ $(function(){
 			$(".degree p").html(degreeCelsius + "&deg;");
 		}
 	});
-
 });
